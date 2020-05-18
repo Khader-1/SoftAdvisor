@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;">
+         <children>
+            <Label layoutX="66.0" layoutY="60.0" text="Theme" textFill="#424874" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#424874" glyphName="ADJUST" size="30" />
+               </graphic>
+            </Label>
+            <Label layoutX="66.0" layoutY="112.0" text="Language" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#424874" glyphName="GLOBE" size="30" />
+               </graphic>
+            </Label>
+            <Label layoutX="66.0" layoutY="178.0" text="Account Settings" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="260.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#424874" glyphName="ACCOUNT_CIRCLE" size="30" text="" />
+               </graphic>
+            </Label>
+            <JFXButton layoutX="231.0" layoutY="110.0" style="-fx-background-color: #f4eeff;" text="Light" textFill="#424874" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <WeatherIconView fill="#424874" glyphName="MOON_ALT_WAXING_GIBBOUS_6" size="30" />
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="390.0" layoutY="110.0" style="-fx-background-color: #424874;" text="Dark" textFill="#f4eeff" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <WeatherIconView fill="#f4eeff" glyphName="MOON_ALT_WANING_GIBBOUS_2" size="30" />
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="318.0" layoutY="110.0" style="-fx-background-color: #f4eeff;" text="عربي" textFill="#424874" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="452.0" layoutY="110.0" style="-fx-background-color: #424874;" text="English" textFill="#f4eeff" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="462.0" layoutY="120.0" style="-fx-background-color: #424874;" text="Manage" textFill="#f4eeff" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="260.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#f4eeff" glyphName="KEY" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

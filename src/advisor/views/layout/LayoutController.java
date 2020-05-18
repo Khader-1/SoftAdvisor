@@ -366,13 +366,16 @@ public class LayoutController implements Initializable {
             route(Advisor.view(Advisor.component("layout/AddTap")));
         });
         refTap(settings, (event) -> {
-            AdminsController.addAdmin();
+            route(Advisor.view(Advisor.component("layout/Settings")));
         });
         refTap(control, (event) -> {
+            route(Advisor.view(Advisor.component(("accounts/List"))));
         });
         refTap(home, (event) -> {
+            route(Advisor.view(Advisor.component("layout/Home")));
         });
         refTap(accuont, (event) -> {
+            AdminsController.view(Advisor.getAdmin());
         });
     }
 

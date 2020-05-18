@@ -90,7 +90,8 @@ public class Advisor extends Application {
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.setFullScreen(true);
+            stage.setWidth(850);
+            stage.centerOnScreen();
         } catch (IOException ex) {
             Logger.getLogger(Advisor.class.getName()).log(Level.SEVERE, null, ex);
         }

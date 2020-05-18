@@ -1,0 +1,21 @@
+.jfx-text-field, .jfx-password-field {
+    -fx-prompt-text-fill: #000;
+    -fx-text-fill: #ffac41;
+    -jfx-focus-color: #ffac41;
+    -jfx-unfocus-color: #000;
+    -fx-font: 20px "Arial";
+}
+.jfx-text-area {
+    -fx-prompt-text-fill: #000;
+    -fx-text-fill: #ffac41;
+    -jfx-focus-color: #ffac41;
+    -jfx-unfocus-color: #000;
+    -fx-font: 20px "Arial";
+}
+.number{
+    -fx-prompt-text-fill: #323232;
+    -fx-text-fill: #ffac41;
+    -jfx-focus-color: #ffac41;
+    -jfx-unfocus-color: #323232;
+    -fx-font: 20px "Arial";
+}

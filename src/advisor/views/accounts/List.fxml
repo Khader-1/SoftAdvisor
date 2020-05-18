@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="300.0" style="-fx-background-color: #fff;" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <content>
+            <VBox fx:id="container" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <padding>
+                  <Insets bottom="50.0" left="10.0" right="10.0" top="50.0" />
+               </padding>
+               <children>
+                  <AnchorPane maxWidth="600.0">
+                     <children>
+                        <JFXButton fx:id="details" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="150.0" right="60.0" top="20.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Circle fx:id="image" fill="WHITE" radius="60.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="-5.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Label layoutX="155.0" layoutY="55.0" text="Label Label Label" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </AnchorPane>
+                  <AnchorPane layoutX="159.0" layoutY="60.0" maxWidth="600.0">
+                     <children>
+                        <JFXButton fx:id="details1" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="150.0" right="60.0" top="20.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Circle fx:id="image1" fill="WHITE" radius="60.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="-5.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Label layoutX="155.0" layoutY="55.0" text="Label Label Label" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="159.0" layoutY="170.0" maxWidth="600.0">
+                     <children>
+                        <JFXButton fx:id="details11" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="150.0" right="60.0" top="20.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Circle fx:id="image11" fill="WHITE" radius="60.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="-5.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Label layoutX="155.0" layoutY="55.0" text="Label Label Label" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="159.0" layoutY="280.0" maxWidth="600.0">
+                     <children>
+                        <JFXButton fx:id="details111" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="150.0" right="60.0" top="20.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Circle fx:id="image111" fill="WHITE" radius="60.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="-5.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Label layoutX="155.0" layoutY="55.0" text="Label Label Label" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="159.0" layoutY="390.0" maxWidth="600.0">
+                     <children>
+                        <JFXButton fx:id="details1111" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="150.0" right="60.0" top="20.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Circle fx:id="image1111" fill="WHITE" radius="60.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="-5.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Label layoutX="155.0" layoutY="55.0" text="Label Label Label" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="159.0" layoutY="500.0" maxWidth="600.0">
+                     <children>
+                        <JFXButton fx:id="details11111" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="150.0" right="60.0" top="20.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Circle fx:id="image11111" fill="WHITE" radius="60.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="-5.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Label layoutX="155.0" layoutY="55.0" text="Label Label Label" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <AnchorPane minHeight="70.0" prefHeight="70.0" style="-fx-background-color: #a6b1e1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow color="#323232" height="20.0" offsetY="2.0" radius="4.75" width="1.0" />
+         </effect>
+         <children>
+            <Label fx:id="title" layoutX="272.0" layoutY="65.0" text="Accounts" textFill="#f4eeff" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="add" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="128.0" minHeight="50.0" minWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100;" text=" " textFill="#f4eeff" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="70.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f4eeff" glyphName="PLUS" size="30" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="search" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="128.0" minHeight="50.0" minWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100;" text=" " textFill="#f4eeff" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="130.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f4eeff" glyphName="SEARCH" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

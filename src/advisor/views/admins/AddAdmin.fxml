@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="840.0" minHeight="500.0" minWidth="600.0" prefHeight="500.0" prefWidth="500.0" style="-fx-background-radius: 7; -fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.views.admins.AddAdmin">
+   <padding>
+      <Insets bottom="30.0" />
+   </padding>
+   <children>
+      <Label text="Label" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0" />
+      <Label prefHeight="60.0" style="-fx-background-color: #424874; -fx-background-radius: 7 7 0 0;" text="Add Admin" textFill="#f4eeff" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+      </Label>
+      <JFXButton fx:id="save" layoutX="52.0" layoutY="374.0" style="-fx-border-color: #424874; -fx-border-radius: 3; -fx-background-radius: 3;" text="save" textFill="#424874" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="name" focusColor="#f4eeff" labelFloat="true" layoutX="100.0" layoutY="107.0" prefWidth="200.0" promptText="name" unFocusColor="#424874" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="address" focusColor="#f4eeff" labelFloat="true" layoutX="110.0" layoutY="117.0" prefWidth="200.0" promptText="Address" unFocusColor="#424874" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="phone" focusColor="#f4eeff" labelFloat="true" layoutX="120.0" layoutY="127.0" prefWidth="200.0" promptText="Mobile" unFocusColor="#424874" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Rectangle fx:id="img" arcHeight="30.0" arcWidth="30.0" fill="#f4eeff" height="200.0" layoutX="20.0" layoutY="92.0" stroke="#323232" strokeType="INSIDE" strokeWidth="0.0" width="200.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <JFXButton fx:id="cancle" layoutX="116.0" layoutY="419.0" style="-fx-border-color: #424874; -fx-border-radius: 3; -fx-background-radius: 3;" text="cancle" textFill="#424874" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="130.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="email" focusColor="#f4eeff" labelFloat="true" layoutX="110.0" layoutY="117.0" prefWidth="200.0" promptText="email" unFocusColor="#424874" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#f4eeff" labelFloat="true" layoutX="403.0" layoutY="200.0" prefWidth="200.0" promptText="password" unFocusColor="#424874" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+     </JFXPasswordField>
+      <JFXPasswordField fx:id="cpassword" focusColor="#f4eeff" labelFloat="true" layoutX="413.0" layoutY="210.0" prefWidth="200.0" promptText="confirm password" unFocusColor="#424874" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXComboBox fx:id="company" focusColor="#424874" labelFloat="true" layoutX="259.0" layoutY="165.0" nodeOrientation="LEFT_TO_RIGHT" promptText="Company" unFocusColor="BLACK" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="120.0" />
+      <JFXComboBox fx:id="role" focusColor="#424874" labelFloat="true" layoutX="467.0" layoutY="355.0" nodeOrientation="LEFT_TO_RIGHT" promptText="role" unFocusColor="BLACK" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="50.0" />
+      <JFXButton fx:id="close" alignment="CENTER" contentDisplay="CENTER" layoutX="504.0" layoutY="28.0" minHeight="0.0" minWidth="0.0" prefHeight="30.0" prefWidth="30.0" ripplerFill="#f4eeff" style="-fx-background-radius: 50;" textFill="#f4eeff" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <graphic>
+            <FontAwesomeIconView fill="#f4eeff" glyphName="CLOSE" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

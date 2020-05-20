@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="400.0" style="-fx-background-radius: 7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.views.layout.Warning">
+   <padding>
+      <Insets bottom="30.0" />
+   </padding>
+   <children>
+      <Rectangle fx:id="image" arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="320.0" layoutX="-41.0" layoutY="-7.0" stroke="#ffb300" strokeType="INSIDE" strokeWidth="3.0" width="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <JFXButton fx:id="close" alignment="CENTER" contentDisplay="CENTER" layoutX="504.0" layoutY="28.0" minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="40.0" ripplerFill="#ffb300" style="-fx-background-radius: 50; -fx-background-color: #fff; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #ffc700;" textFill="#ffb300" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="-20.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="CLOSE" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="submit" layoutX="106.0" layoutY="246.0" style="-fx-background-radius: 10;" text="confirm!" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="109.0" AnchorPane.topAnchor="246.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="148.0" text="Do you want to delete this?" textFill="#3e3e40" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

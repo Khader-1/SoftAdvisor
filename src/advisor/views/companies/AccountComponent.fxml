@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="out" maxWidth="700.0" minHeight="100.0" prefHeight="100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.views.companies.ComponentController">
+   <children>
+      <JFXButton fx:id="details" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 3;" text="Khader M Khudair" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="20.0" left="110.0" right="60.0" top="20.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Label fx:id="id" layoutX="155.0" layoutY="55.0" text="id" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="110.0" />
+      <ImageView fx:id="img" fitHeight="90.0" fitWidth="90.0" layoutX="19.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <JFXButton fx:id="options" alignment="CENTER" contentDisplay="CENTER" minHeight="0.0" minWidth="0.0" prefWidth="34.0" ripplerFill="#c9c4d3" style="-fx-background-radius: 10;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="33.0">
+         <graphic>
+            <FontAwesomeIconView fill="#424874" glyphName="ELLIPSIS_H" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="addEmployee" alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="43.0" minHeight="0.0" minWidth="0.0" prefWidth="34.0" ripplerFill="#c9c4d3" style="-fx-background-radius: 10;" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="33.0">
+         <graphic>
+            <FontAwesomeIconView fill="#424874" glyphName="USER_PLUS" size="25" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="menu" layoutX="246.0" layoutY="-28.0" minHeight="0.0" minWidth="0.0" prefWidth="0.0" style="-fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <Label layoutX="86.0" layoutY="14.0" minHeight="20.0" minWidth="20.0" rotate="45.0" style="-fx-background-color: #f4eeff;" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="10.0" />
+            <VBox layoutX="40.0" layoutY="-44.0" minHeight="0.0" prefWidth="100.0" style="-fx-background-color: #f4eeff; -fx-background-radius: 6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="view" minHeight="15.0" minWidth="150.0" style="-fx-background-radius: 7;" styleClass="listItem" stylesheets="@../../../resources/style/style.css" text="View     " textFill="#424874">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIconView fill="#424874" glyphName="LIST_ALT" size="17" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="update" layoutX="10.0" layoutY="10.0" minHeight="15.0" minWidth="150.0" style="-fx-background-radius: 7;" styleClass="listItem" stylesheets="@../../../resources/style/style.css" text="Update" textFill="#424874">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIconView fill="#424874" glyphName="PENCIL_SQUARE" size="17" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="delete" layoutX="10.0" layoutY="40.0" minHeight="15.0" minWidth="150.0" style="-fx-background-radius: 7;" styleClass="listItem" stylesheets="@../../../resources/style/style.css" text="Delete  " textFill="#424874">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIconView fill="#424874" glyphName="TRASH_ALT" size="17" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow color="#aaaaaa" />
+   </effect>
+</AnchorPane>

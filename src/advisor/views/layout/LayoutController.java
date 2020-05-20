@@ -3,6 +3,8 @@ package advisor.views.layout;
 import advisor.Advisor;
 import advisor.Router;
 import advisor.controllers.AdminsController;
+import advisor.controllers.CompaniesController;
+import advisor.controllers.CustomersController;
 import advisor.viewsManager.CustomTransition;
 import advisor.viewsManager.ImageViewer;
 import com.jfoenix.controls.JFXButton;
@@ -259,12 +261,17 @@ public class LayoutController implements Initializable {
         nav.put(searchLink, searchIcon);
         nav.put(exit, exitIcon);
 
-        ref(comsLink, Advisor.component("accounts/Account"));
+        ref(comsLink, (event) -> {
+            CompaniesController.viewAll();
+        });
         ref(myCompany, (event) -> {
+            CompaniesController.companyData(Advisor.getAdmin().getCompany());
         });
         ref(customersLink, (event) -> {
+            CustomersController.viewAll();
         });
         ref(adminsLink, (event) -> {
+            AdminsController.viewAll();
         });
         ref(statisticsLink, (event) -> {
         });
@@ -292,7 +299,7 @@ public class LayoutController implements Initializable {
         }
     }
 
-    static void showAlert(Node root, double width, double hieght) {
+    public static void showAlert(Node root, double width, double hieght) {
         AnchorPane alertPane = refernce.alert;
         alertPane.getChildren().clear();
         AnchorPane.setBottomAnchor(alertPane, 0d);

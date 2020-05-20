@@ -1,6 +1,7 @@
 package advisor;
 
-import advisor.filesManager.FilesHandler;
+import advisor.storage.DBHandler;
+import advisor.storage.FilesHandler;
 import advisor.models.Admin;
 import advisor.viewsManager.ImagePicker;
 import java.io.File;
@@ -33,7 +34,7 @@ public class Advisor extends Application {
     public void start(Stage stage) throws Exception {
         DBHandler.init();
         FilesHandler.init();
-        FXMLLoader loader = (new Router().view("login"));
+        FXMLLoader loader = (new Router().view(component("auth/Login")));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);

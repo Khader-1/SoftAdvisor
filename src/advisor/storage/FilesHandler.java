@@ -1,4 +1,4 @@
-package advisor.filesManager;
+package advisor.storage;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class FilesHandler {
 
-    final static private String PATH = System.getProperty("user.home") + "\\clinic\\";
+    final static private String PATH = System.getProperty("user.home") + "\\advisor\\";
     public static void check(String path, boolean isDir) throws IOException {
         File file = get(path);
         if (file.exists()) {

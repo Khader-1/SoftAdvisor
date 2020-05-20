@@ -1,6 +1,6 @@
 package advisor.models;
 
-import advisor.DBHandler;
+import advisor.storage.DBHandler;
 import static advisor.models.Admin.newAdmin;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,46 +11,79 @@ public class Company {
 
     private final int id;
     private String name;
+    private String image;
 
-    public Company(String name) {
+    public Company(String name, String image) {
         this.name = name;
         id = generateId();
+        this.image = image;
     }
 
-    public Company(int id, String name) {
+    public Company(int id, String name, String image) {
         this.name = name;
         this.id = id;
+        this.image = image;
     }
 
-    public void save() throws SQLException {
-        DBHandler.connection.createStatement().execute("INSERT INTO company (id, name) VALUES (" + id + ", \"" + name + "\"); ");
-    }
-
-    public void update() throws SQLException {
-        DBHandler.connection.createStatement().execute("UPDATE company SET name = \"" + name + "\" WHERE id = " + id + "; ");
-    }
-
-    public void delete() throws SQLException {
-        DBHandler.connection.createStatement().execute("Delete From company Where id = " + this.id + ";");
-    }
-
-    public static Company find(int id) throws SQLException {
-        ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from company WHERE id = " + id + " ;");
-        return new Company(id, result.getString("name"));
-    }
-
-    public static Company find(String name) throws SQLException {
-        ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from company WHERE name = " + name + " ;");
-        return new Company(result.getInt("id"), name);
-    }
-
-    public static List<Company> findAll() throws SQLException {
-        ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from company;");
-        List<Company> sections = new ArrayList();
-        while (result.next()) {
-            sections.add(new Company(result.getInt("id"), result.getString("name")));
+    public void save() {
+        try {
+            DBHandler.connection.createStatement().execute("INSERT INTO company (id, name, img) VALUES (" + id + ", \"" + name + "\", \"" + image + "\"); ");
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return sections;
+    }
+
+    public void update() {
+        try {
+            System.out.println("UPDATE company SET name = \"" + name + "\", img = \"" + image + "\" WHERE id = " + id + "; ");
+            DBHandler.connection.prepareStatement("UPDATE company SET name = \"" + name + "\", img = \"" + image + "\" WHERE id = " + id + "; ").executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void delete() {
+        try {
+            DBHandler.connection.createStatement().executeUpdate("Delete From company Where id = " + this.id + ";");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Company find(int id) {
+        if (id == 0) {
+            return new Company(0, "office",  null);
+        }
+        try {
+            ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from company WHERE id = " + id + " ;");
+            return new Company(id, result.getString("name"), result.getString("img"));
+        } catch (SQLException e) {
+            return new Company(-1, "deleted", null);
+        }
+    }
+
+    public static Company find(String name) {
+        try {
+            ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from company WHERE name = " + name + " ;");
+            return new Company(result.getInt("id"), name, result.getString("img"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static List<Company> findAll() {
+        try {
+            ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from company;");
+            List<Company> companys = new ArrayList();
+            while (result.next()) {
+                companys.add(new Company(result.getInt("id"), result.getString("name"), result.getString("img")));
+            }
+            return companys;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public List<Admin> findAdmins() throws SQLException {
@@ -74,7 +107,15 @@ public class Company {
         this.name = name;
     }
 
-    private static int generateId() {
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public static int generateId() {
         try {
             ResultSet rs = DBHandler.connection.createStatement().executeQuery("select max(id) from company");
             rs.next();

@@ -1,7 +1,7 @@
 package advisor.models;
 
 import advisor.Advisor;
-import advisor.DBHandler;
+import advisor.storage.DBHandler;
 import static advisor.models.Deal.newDeal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,8 +20,8 @@ public abstract class Admin {
         return false;
     }
 
-    public final static int READONLY = 1;
-    public final static int WRITE = 2;
+    public final static int READ_ONLY = 1;
+    public final static int READ_WRITE = 2;
     public final static int MANAGER = 3;
     public final static int ADVISOR = 4;
     public final static int FULL_PRIVELLEGS = 5;
@@ -62,9 +62,9 @@ public abstract class Admin {
 
     public void update() {
         try {
-            DBHandler.connection.createStatement().execute("UPDATE admin SET  name = \"" + name + "\", email = \"" + email + "\", password = \"" + password + "\", img = \"" + img + "\", phone = \"" + phone + "\", companyId = " + company.getId() + " WHERE id = " + id + " ;");
+            DBHandler.connection.createStatement().executeUpdate("UPDATE admin SET  name = \"" + name + "\", email = \"" + email + "\", password = \"" + password + "\", img = \"" + img + "\", phone = \"" + phone + "\", companyId = " + company.getId() + ", role = " + getRole() + " WHERE id = " + id + " ;");
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -87,14 +87,17 @@ public abstract class Admin {
             }
             return admins;
         } catch (SQLException e) {
+            e.printStackTrace();
             return null;
         }
     }
 
     public void delete() {
         try {
-            DBHandler.connection.createStatement().execute("Delete From admin Where id = " + this.id + ";");
+            System.out.println("Delete From admin Where id = " + this.id + ";");
+            DBHandler.connection.createStatement().executeUpdate("Delete From admin Where id = " + this.id + ";");
         } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -118,8 +121,12 @@ public abstract class Admin {
         return phone;
     }
 
-    protected Company getCompany() {
+    public Company getCompany() {
         return company;
+    }
+
+    public void setCompany(Company c) {
+        this.company = c;
     }
 
     public void setName(String name) {
@@ -136,10 +143,6 @@ public abstract class Admin {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    protected void setCompany(Company company) {
-        this.company = company;
     }
 
     public static int generateId() {
@@ -171,13 +174,17 @@ public abstract class Admin {
 
     public static Admin newAdmin(int id, String name, String email, String password, String img, String phone, Company company, int role) {
         switch (role) {
-            case 3:
+            case MANAGER:
                 return new Manager(id, name, email, password, img, phone, company);
-            case 4:
-            case 5:
+            case ADVISOR:
+            case FULL_PRIVELLEGS:
                 return new advisor.models.Advisor(id, name, email, password, img, phone, role);
             default:
-                return new Employee(name, email, password, img, phone, company, role);
+                return new Employee(id, name, email, password, img, phone, company, role);
         }
+    }
+
+    public String getPassword() {
+        return this.password;
     }
 }

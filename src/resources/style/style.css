@@ -1,0 +1,6 @@
+.listItem:hover {
+    -fx-background-color:  #dcd6f7;
+}
+.listItem:active {
+    -fx-background-color:  #dcd6f7;
+}

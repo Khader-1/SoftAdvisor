@@ -1,6 +1,6 @@
 package advisor.models;
 
-import advisor.DBHandler;
+import advisor.storage.DBHandler;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

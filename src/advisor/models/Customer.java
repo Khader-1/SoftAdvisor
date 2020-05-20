@@ -1,6 +1,6 @@
 package advisor.models;
 
-import advisor.DBHandler;
+import advisor.storage.DBHandler;
 import static advisor.models.Deal.newDeal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,17 +30,19 @@ public class Customer {
 
     public void save() {
         try {
+            System.out.println("INSERT INTO customer (id, name, address, phone, img) VALUES (" + id + ", \"" + name + "\", \"" + address + "\", \"" + phone + "\", \"" + img + "\"); ");
             DBHandler.connection.createStatement().execute("INSERT INTO customer (id, name, address, phone, img) VALUES (" + id + ", \"" + name + "\", \"" + address + "\", \"" + phone + "\", \"" + img + "\"); ");
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
     public void update() {
         try {
-            DBHandler.connection.createStatement().execute("UPDATE customer SET  name = \"" + name + "\", img = \"" + img + "\", phone = \"" + phone + "\", address = \"" + address + "\" WHERE id = " + id + " ;");
+            System.out.println("UPDATE customer SET  name = \"" + name + "\", img = \"" + img + "\", phone = \"" + phone + "\", address = \"" + address + "\" WHERE id = " + id + " ;");
+            DBHandler.connection.createStatement().executeUpdate("UPDATE customer SET  name = \"" + name + "\", img = \"" + img + "\", phone = \"" + phone + "\", address = \"" + address + "\" WHERE id = " + id + " ;");
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -64,7 +66,7 @@ public class Customer {
 
     public static List<Customer> findAll() {
         try {
-            ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from patient;");
+            ResultSet result = DBHandler.connection.createStatement().executeQuery("SELECT * from customer;");
             List<Customer> customers = new ArrayList();
             while (result.next()) {
                 customers.add(new Customer(result.getInt("id"), result.getString("name") , result.getString("address"), result.getString("phone"), result.getString("img")));
@@ -116,7 +118,7 @@ public class Customer {
         this.img = img;
     }
 
-    private static int generateId() {
+    public static int generateId() {
         try {
             ResultSet rs = DBHandler.connection.createStatement().executeQuery("select max(id) from customer");
             rs.next();

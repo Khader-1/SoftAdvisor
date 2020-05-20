@@ -1,5 +1,6 @@
-package advisor;
+package advisor.views.auth;
 
+import advisor.Advisor;
 import advisor.models.Admin;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;

@@ -23,7 +23,7 @@ public class Employee extends Admin {
     }
 
     @Override
-    int getRole() {
+    public int getRole() {
         return this.role;
     }
 

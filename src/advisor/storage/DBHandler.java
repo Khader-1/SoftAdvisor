@@ -1,4 +1,4 @@
-package advisor;
+package advisor.storage;
 
 import java.sql.*;
 

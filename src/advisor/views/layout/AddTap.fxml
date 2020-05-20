@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.views.layout.AddTap">
    <children>
       <GridPane hgap="20.0" maxWidth="600.0" minHeight="0.0" minWidth="200.0" vgap="20.0">
          <columnConstraints>
@@ -26,7 +26,7 @@
          <children>
             <AnchorPane layoutX="10.0" layoutY="-25.0" minHeight="100.0" minWidth="100.0" GridPane.rowIndex="1">
                <children>
-                  <JFXButton style="-fx-background-color: #f4eeff;" text="Employee" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton fx:id="employee" style="-fx-background-color: #f4eeff;" text="Employee" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <graphic>
                         <MaterialDesignIconView fill="#424874" glyphName="ACCOUNT" size="30" />
                      </graphic>
@@ -38,7 +38,7 @@
             </AnchorPane>
             <AnchorPane layoutX="30.0" layoutY="150.0" minHeight="100.0" minWidth="100.0" GridPane.rowIndex="2">
                <children>
-                  <JFXButton style="-fx-background-color: #f4eeff;" text="Advisor" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton fx:id="advisor" style="-fx-background-color: #f4eeff;" text="Advisor" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <graphic>
                         <MaterialDesignIconView fill="#424874" glyphName="ACCOUNT_STAR_VARIANT" size="30" />
                      </graphic>
@@ -50,7 +50,7 @@
             </AnchorPane>
             <AnchorPane layoutX="30.0" layoutY="30.0" minHeight="100.0" minWidth="100.0" style="-fx-background-color: #f4eeff;" GridPane.columnIndex="1">
                <children>
-                  <JFXButton text="Customer" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton fx:id="customer" text="Customer" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <graphic>
                         <MaterialDesignIconView fill="#424874" glyphName="CLIPBOARD_ACCOUNT" size="30" />
                      </graphic>
@@ -86,7 +86,7 @@
             </AnchorPane>
             <AnchorPane layoutX="150.0" layoutY="30.0" minHeight="100.0" minWidth="100.0" style="-fx-background-color: #f4eeff;">
                <children>
-                  <JFXButton text="Company" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton fx:id="company" text="Company" textFill="#424874" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <graphic>
                         <FontAwesomeIconView fill="#424874" glyphName="BUILDING" size="30" />
                      </graphic>
